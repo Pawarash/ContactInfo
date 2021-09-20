@@ -157,8 +157,8 @@ namespace ContactInfoWeb
                 c.UseInMemoryDatabase("ContactInfoConnection"));
 
             //// use real database
-            //services.AddDbContext<AspnetRunContext>(c =>
-            //    c.UseSqlServer(Configuration.GetConnectionString("AspnetRunConnection")));
+            //services.AddDbContext<ContactInfoContext>(c =>
+            //    c.UseSqlServer(Configuration.GetConnectionString("ContactInfoConnection")));
         }
     }
 }
