@@ -1,0 +1,61 @@
+﻿@page
+@model ContactInfoWeb.Pages.Contact.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Contact List</h1>
+
+<form method="get">
+    
+</form>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Active</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model.ContactList)
+        {
+        <tr>
+            <th scope="row">@contact.Id</th>
+            <td>@contact.FirstName</td>
+            <td>@contact.LastName</td>
+            <td>@contact.Email</td>
+            <td>@contact.PhoneNumber</td>
+            <td>@contact.Status</td>
+            <td>
+                <a class="btn"
+                   asp-page="./Details"
+                   asp-route-contactId="@contact.Id">
+                    Details
+                </a>
+                <a class="btn"
+                   asp-page="./Edit"
+                   asp-route-contactId="@contact.Id">
+                    Edit
+                </a>
+                <a class="btn"
+                   asp-page="./Delete"
+                   asp-route-contactId="@contact.Id">
+                    Delete
+                </a>
+               
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
