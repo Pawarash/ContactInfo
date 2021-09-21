@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContactInfo.Application\ContactInfo.Application.csproj" />
-    <ProjectReference Include="..\ContactInfo.Core\ContactInfo.Core.csproj" />
+    <ProjectReference Include="..\..\Src\ContactInfo.Application\ContactInfo.Application.csproj" />
+    <ProjectReference Include="..\..\Src\ContactInfo.Core\ContactInfo.Core.csproj" />
   </ItemGroup>
 
 </Project>

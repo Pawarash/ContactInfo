@@ -12,8 +12,8 @@ namespace ContactInfo.Web.Tests
 
     using ContactInfo.Infrastructure.Data;
 
+    using ContactInfo.Web;
     using ContactInfoWeb;
-
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.Testing;
     using Microsoft.EntityFrameworkCore;
